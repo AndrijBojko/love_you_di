@@ -1,0 +1,142 @@
+* {box-sizing: border-box}
+body {font-family: Verdana, sans-serif; margin:0; background-color: #EB5346; zoom: 100%}
+.mySlides {display: none}
+img {vertical-align: middle;}
+
+.slideshow-container {
+    max-width: 495px;
+    position: relative;
+    padding-left: 100px;
+    height: 240px;
+}
+
+.app-container {
+    width: 1120px;
+    height: 680px;
+    background-image: url(./images/back_2.jpg);
+    position: relative;
+    margin: auto;
+    margin-top: 120px;
+    border-radius: 80px
+}
+
+.courusel {
+    text-align: center;
+    max-width: 495px;
+    padding-left: 100px;
+}
+
+.caption {
+    padding-top: 160px;
+    padding-left: 100px;
+    width: 540px;
+    font-size: 56px;
+    font-weight: 900;
+    font-family: 'Caveat', cursive;
+    color: #e13a2c;
+}
+
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -30px;
+  margin-left: -81px;
+  margin-right: -52px;
+  color: #EB5346;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+.next {
+  right: 0;
+  border-radius: 40px;
+}
+
+.prev {
+  border-radius: 40px;
+}
+
+.prev:hover, .next:hover {
+  background-color: rgb(235 235 235 / 80%);
+}
+
+.text {
+    padding-top: 25px;
+    color: #838383;
+    font-size: 28px;
+    font-family: 'Caveat', cursive;
+}
+
+.text .heart {
+  color: #e13a2c;
+  float: unset;
+}
+
+.text .ps {
+  padding-right: 20px;
+}
+
+.text span {
+    float: right;
+}
+
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 10px;
+  background-color: #f7b3ad;;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+    background-color: #eb5346;
+}
+
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@media only screen and (max-width: 300px) {
+  .prev, .next,.text {font-size: 11px}
+}
+
+@media only screen and (max-device-width:600px), screen and (max-width: 950px) and (min-width: 390px) {
+  .app-container {
+    transform: translateY(-100%) rotate(90deg);
+    transform-origin: left bottom;
+    margin: 10px;
+  }
+
+  body {
+    margin-top: 25%;
+    margin-left: 5%;
+  }
+}
+
+@media only screen and (max-device-width:389px), screen and (max-width: 389px) and (min-width: 190px) {
+  .app-container {
+    transform: translateY(-100%) rotate(90deg);
+    transform-origin: left bottom;
+    margin: 10px;
+  }
+
+  body {
+    margin-top: 10%;
+    margin-left: unset;
+  }
+}
